@@ -1,0 +1,19 @@
+<h1>ログイン</h1>
+
+<%=
+  form_for :user, '/users' do
+    div class: 'input' do
+      label      :email
+      text_field :email
+    end
+
+    div class: 'input' do
+      label      :password
+      text_field :password
+    end
+
+    div class: 'controls' do
+      submit 'Login'
+    end
+  end
+%>
