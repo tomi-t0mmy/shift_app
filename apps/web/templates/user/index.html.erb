@@ -1,2 +1,8 @@
-<h1>Welcom!</h1>
-<%= session[:email] %>
+<h1>Welcome!</h1>
+<h2><%=  user_name  %>さん</h2>
+
+<%=
+  form_for :session, "/session/:id", method: :delete do
+      submit 'log out'
+  end
+%>
