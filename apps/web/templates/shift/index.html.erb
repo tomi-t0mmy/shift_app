@@ -1,0 +1,14 @@
+<h1><%= year %>年<%= month %>月<%= period %>のシフト</h1>
+<% for i in 0...30%>
+    <% if shifts[i] == [] %>
+        <div><%= i+1 %>日</div>
+    <% elsif shifts[i] != nil %>
+        <div><%= i+1 %>日</div>
+        <%shifts[i].each do |s|%>
+             <div>
+            <%= s[0] %>:昼 <%= s[1] %>時〜<%= s[2] %>時 夜 <%= s[3] %>時〜<%= s[4] %>時
+            </div>
+        <% end %>
+    <% end %>
+<% end %>
+
