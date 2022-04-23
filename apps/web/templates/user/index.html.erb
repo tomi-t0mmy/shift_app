@@ -5,18 +5,18 @@
     <%=
     form_for :shift, "/shift", method: :get do
         div class: 'input' do
-        label      :year
+        label      "年"
         text_field :year
         end
 
         div class: 'input' do
-        label      :month
+        label      '月'
         text_field :month
         end
         
         div class: 'input' do
-        label      :period
-        values = Hash['first' => false, 'second' => true]
+        label      "前半/後半"
+        values = Hash['前半' => false, '後半' => true]
         select :store, values
         end
 
@@ -34,6 +34,6 @@
 <% end %>
 <%=
 form_for :session, "/session/:id", method: :delete do
-    submit 'log out'
+    submit 'ログアウト'
 end
 %>

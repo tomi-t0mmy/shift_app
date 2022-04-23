@@ -3,17 +3,22 @@
 <%=
   form_for :session, '/session' do
     div class: 'input' do
-      label      :email
+      label      "メールアドレス"
       text_field :email
     end
 
     div class: 'input' do
-      label      :password
+      label      "パスワード"
       text_field :password
     end
 
     div class: 'controls' do
-      submit 'Login'
+      submit 'ログイン'
     end
   end
+%>
+<%=
+form_for :user, "/user/new", method: :get do
+    submit '新規登録ページへ'
+end
 %>

@@ -7,28 +7,34 @@ form_for :shift, '/shift' do
     day_list.each do |i|
         i
         div class: 'input' do
-        label      "#{i}日lunch_start"
+        label      "#{i}日:昼_開始"
         text_field "lunch_start_#{i}"
         end
         
         div class: 'input' do
-        label      "#{i}日lunch_finish"
+        label      "#{i}日:昼_終了"
         text_field "lunch_finish_#{i}"
         end
 
         div class: 'input' do
-        label      "#{i}日dinner_start"
+        label      "#{i}日:夜_開始"
         text_field "dinner_start_#{i}"
         end
 
         div class: 'input' do
-        label      "#{i}日dinner_finish"
+        label      "#{i}日:夜_終了"
         text_field "dinner_finish_#{i}"
         end
     end
 
     div class: 'controls' do
-      submit 'submit'
+      submit '提出'
     end
+end
+%>
+
+<%=
+form_for :submit, "/submit/new", method: :get do
+    submit '戻る'
 end
 %>
