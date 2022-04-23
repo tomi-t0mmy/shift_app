@@ -1,0 +1,25 @@
+<h1>シフト登録</h1>
+
+<%=
+  form_for :shift, "/shift/new", method: :get do
+    div class: 'input' do
+      label      :year
+      text_field :year
+    end
+
+    div class: 'input' do
+      label      :month
+      text_field :month
+    end
+    
+    div class: 'input' do
+      label      :period
+      values = Hash['first' => false, 'second' => true]
+      select :store, values
+    end
+
+    div class: 'controls' do
+      submit 'シフト作成'
+    end
+  end
+%>

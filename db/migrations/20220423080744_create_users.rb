@@ -7,7 +7,7 @@ Hanami::Model.migration do
       column :first_name, String, null: false
       column :email, String, null: false
       column :password, String, null: false
-      column :admi, Boolean, null: false, default: false
+      column :admin, :boolean, null: false, default: false
 
       column :created_at, DateTime, null: false
       column :updated_at, DateTime, null: false

@@ -2,6 +2,11 @@
 <h2><%=  user_name  %>さん</h2>
 
 <%=
+  form_for :submit, "/submit/new", method: :get do
+      submit 'シフト申請'
+  end
+%>
+<%=
   form_for :session, "/session/:id", method: :delete do
       submit 'log out'
   end

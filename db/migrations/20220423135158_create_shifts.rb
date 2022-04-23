@@ -2,7 +2,7 @@ Hanami::Model.migration do
   change do
     create_table :shifts do
       primary_key :id
-      foreign_key :user_id, :user, on_delete: :cascade, null: false
+      foreign_key :user_id, :users, on_delete: :cascade, null: false
 
       column :year, Integer, null: false
       column :month, Integer, null: false
