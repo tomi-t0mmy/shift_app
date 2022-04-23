@@ -5,6 +5,9 @@ module Web
         include Web::Action
 
         def call(params)
+          if session[:id] == nil
+            redirect_to '/session'
+          end
         end
       end
     end

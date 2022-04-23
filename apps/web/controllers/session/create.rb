@@ -7,11 +7,14 @@ module Web
         def call(params)
           user = UserRepository.new.find_by_email(params[:session][:email])
           if user != nil
-            session[:id] = user.id
-
-            redirect_to '/user'
+            if user.password == params[:session][:password]
+              session[:id] = user.id
+              redirect_to '/user'
+            else
+              redirect_to '/session'
+            end
           else
-            self.status = 401
+            redirect_to '/session'
           end   
         end
       end
