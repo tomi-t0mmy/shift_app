@@ -1,10 +1,6 @@
 class ShiftRepository < Hanami::Repository
-    def find_by_year_month_period(year, month, period)
-        if period == 'first'
-            shifts.where(year: year,month: month, day: 1...16).call.collection
-        else
-            shifts.where(year: year,month: month, day: 16...32).call.collection
-        end
+    def find_by_id_year_month_day(id,year, month, day)
+            shifts.where(id: id, year: year,month: month, day: day).one
     end
 
     def find_by_year_month_day(year, month, day)

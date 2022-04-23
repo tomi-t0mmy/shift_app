@@ -26,6 +26,16 @@
     end
     %>
 <% else %>
+    <h2>提出シフト一覧</h2>
+    <% if submits != nil %>
+        <% submits.each do |s|%>
+            <li>
+                <%= s.year %>年<%= s.month %>月<%= s.period ? '後半' : '前半' %>
+            </li>
+        <% end %>
+    <% end %>
+
+
     <%=
     form_for :submit, "/submit/new", method: :get do
         submit 'シフト申請'
