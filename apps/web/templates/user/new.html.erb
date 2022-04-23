@@ -1,0 +1,29 @@
+<h1>新規登録</h1>
+
+<%=
+  form_for :user, '/user' do
+    div class: 'input' do
+      label      :last_name
+      text_field :last_name
+    end
+
+    div class: 'input' do
+      label      :first_name
+      text_field :first_name
+    end
+    
+    div class: 'input' do
+      label      :email
+      text_field :email
+    end
+
+    div class: 'input' do
+      label      :password
+      text_field :password
+    end
+
+    div class: 'controls' do
+      submit '新規登録'
+    end
+  end
+%>

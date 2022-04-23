@@ -6,3 +6,5 @@
 get '/session', to: 'session#index'
 post '/session', to: 'session#create'
 get '/user', to: 'user#index'
+get '/user/new', to: 'user#new'
+post '/user', to: 'user#create'
