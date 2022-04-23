@@ -1,0 +1,3 @@
+project=shift_app
+test=rspec
+template=erb
