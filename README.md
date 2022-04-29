@@ -1,33 +1,15 @@
 # Shift App
 
-Welcome to your new Hanami project!
+2022/4/23~24のサポーターズ技育CAMPハッカソンで作成したものをそのまま載せています。
 
-## Setup
+## 作ろうとしたもの
+バイト先用のシフト作成アプリ
 
-How to run tests:
-
-```
-% bundle exec rake
-```
-
-How to run the development console:
-
-```
-% bundle exec hanami console
-```
-
-How to run the development server:
-
-```
-% bundle exec hanami server
-```
-
-How to prepare (create and migrate) DB for `development` and `test` environments:
-
-```
-% bundle exec hanami db prepare
-
-% HANAMI_ENV=test bundle exec hanami db prepare
-```
-
-Explore Hanami [guides](https://guides.hanamirb.org/), [API docs](http://docs.hanamirb.org/1.3.5/), or jump in [chat](http://chat.hanamirb.org) for help. Enjoy! 🌸
+## 開発時の状態
+- 二日間でHanamiの情報収集からアプリ作成までを行った
+- 個人開発
+## 今後修正すべき点
+- データベースの設計の修正
+- ログイン認証の改善・ライブラリの使用
+- バリデーション追加
+- デザイン
